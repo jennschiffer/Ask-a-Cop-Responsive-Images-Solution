@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Responsive Images</title>
+</head>
+<body>
+
+<h1>Responsive Images</h1>
+
+<img id="responsive" alt="image has not responded yet" />
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+  var mobileOrDesktop = prompt("Is this a mobile device (y) or desktop (n)? y/n");
+  var $responsiveImage = $('img#responsive');
+
+  switch ( mobileOrDesktop ) {
+  	case 'y':
+      $responsiveImage.attr({
+      	'src' : 'mobile.jpg',
+      	'alt' : 'mobile image'
+      });
+      break;
+    case 'n':
+      $responsiveImage.attr({
+      	'src' : 'desktop.jpg',
+      	'alt' : 'desktop image'
+      });
+      break;
+    default:
+      $responsiveImage.attr({
+      	'src' : 'trojanhorse.jpg',
+      	'alt' : 'hack the planet'
+      });
+      break;
+  }
+
+})
+</script>
+</body>
+</html>
