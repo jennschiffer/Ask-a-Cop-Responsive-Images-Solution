@@ -2,12 +2,22 @@
 <html lang="en">
 <head>
   <title>Responsive Images</title>
+  <style type="text/css">
+  	html { margin: 0; padding: 0; border-top: 5px solid lime; }
+    body { font-family: monospace; width: 800px; margin: 0 auto;}
+    a { color: magenta; }
+    a:hover { color: cyan; }
+  </style>
 </head>
 <body>
 
 <h1>Responsive Images</h1>
 
 <img id="responsive" alt="image has not responded yet" />
+
+<a href="https://github.com/jennschiffer/Ask-a-Cop-Responsive-Images-Solution"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+
+<p>This solution was implemented by <a href="http://twitter.com/jennschiffer" target="_blank">Jenn Schiffer</a> for her upcoming Kindle Single <a href="https://medium.com/p/d9a47f94eea7" target="_blank">"XML Is The Only High-Level Programming Language You Need"</a>.</p>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript">
@@ -33,6 +43,7 @@ $(function(){
       	'src' : 'trojanhorse.jpg',
       	'alt' : 'hack the planet'
       });
+      $responsiveImage.after('<h1>TOLD YA TO CHOOSE Y OR NO BUT YOU DIDN\'T SO<br />~ * V I R U S * ~');
       break;
   }
 
